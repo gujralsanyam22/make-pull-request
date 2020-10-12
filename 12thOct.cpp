@@ -1,46 +1,59 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h> 
+using namespace std; 
 
-#define ll long long int
-#define watch(x) cout << (#x) << " is " << (x) << endl  //watch function print variable and value for debugging
-#define count_ones __builtin_popcountll                  // count_ones(9) is equal to 2 valid for ll also
-#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL);
-#define fo(i,n) for(ll i=0;i<n;i++)
-using namespace std;
+// Function to sort the input array, 
+// the array is assumed 
+// to have values in {0, 1, 2} 
+void sort012(int a[], int arr_size) 
+{ 
+	int lo = 0; 
+	int hi = arr_size - 1; 
+	int mid = 0; 
 
-int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input1.txt", "r", stdin);
-	freopen("output1.txt", "w", stdout);
-#endif
-	fast_io
+	// Iterate till all the elements 
+	// are sorted 
+	while (mid <= hi) { 
+		switch (a[mid]) { 
 
-	int n;
-	cin >> n;
-	int a[n];
-	for (int i = 0; i < n; i++)
-		cin >> a[i];
-	int low = 0;
-	int high = n - 1;
-	int mid = 0;
+		// If the element is 0 
+		case 0: 
+			swap(a[lo++], a[mid++]); 
+			break; 
 
-	while (mid <= high)
-	{
-		switch (a[mid])
-		{
-		case 0:
-			swap(a[low++], a[mid++]);
-			break;
-		case 1:
-			mid++;
-			break;
-		case 2:
-			swap(a[mid], a[high--]);
-			break;
-		}
-	}
-	for (int i = 0; i < n; i++)
-		cout << a[i] << " ";
+		// If the element is 1 . 
+		case 1: 
+			mid++; 
+			break; 
 
+		// If the element is 2 
+		case 2: 
+			swap(a[mid], a[hi--]); 
+			break; 
+		} 
+	} 
+} 
 
-	return 0;
-}
+// Function to print array arr[] 
+void printArray(int arr[], int arr_size) 
+{ 
+	// Iterate and print every element 
+	for (int i = 0; i < arr_size; i++) 
+		cout << arr[i] << " "; 
+} 
+
+// Driver Code 
+int main() 
+{ 
+	int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 }; 
+	int n = sizeof(arr) / sizeof(arr[0]); 
+
+	sort012(arr, n); 
+
+	cout << "array after segregation "; 
+
+	printArray(arr, n); 
+
+	return 0; 
+} 
+
+// This code is contributed by Shivi_Aggarwal 
