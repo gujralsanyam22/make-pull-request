@@ -3,16 +3,17 @@ using namespace std;
 
 int main()
 {
-  int a=1,b=1,c,n;
+  int i,f[n],f[0]=0, f[1]=1;
  cout<<"Enter the number of elements: ";
  cin>>n;
- cout<<a<<" "<<b<<" "; //printing 1 and 1
- for(int i=3;i<=n;++i) //loop starts from 3 because 1 and 1 are already printed
+ cout<<f[0]<<" "<<f[1]<<" "; //printing 1 and 1
+ for(int i=2;i<n;++i) //loop starts from 3 because 1 and 1 are already printed
  {
-  c=a+b;
-  cout<<c<<" ";
-  a=b;
-  b=c;
+  f[i] = f[i-1]+f[i-2];
  }
-   return 0;
+  for(i=0; i<n;  i++)
+  {
+    cout<<f[i]<<" ";
+}
+return 0;
 }
