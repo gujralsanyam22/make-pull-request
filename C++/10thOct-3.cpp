@@ -1,30 +1,24 @@
-/*
-    Program Description : Reverse String
-    Function Name : reverseString(string) -- return type void
-  
-*/
 
-//Author: Siddhant Kaura
 
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h> 
+using namespace std; 
 
-void reverseString(string &str){
-  int length_of_string = str.length();
-  int start = 0;
+// Function to reverse a string 
+void reverseStr(string& str) 
+{ 
+	int n = str.length(); 
 
-  //swapping first and last element.
-  while(start < length_of_string/2){
-      char ch = str[start];
-      str[start] = str[length_of_string-start-1];
-      str[length_of_string-start-1] = ch; 
-      start++;
-  }
-}
+	// Swap character starting from two 
+	// corners 
+	for (int i = 0; i < n / 2; i++) 
+		swap(str[i], str[n - i - 1]); 
+} 
 
-int main() {
-    string str;
-    cin >> str;
-    reverseString(str);
-    cout << str;
-}
+// Driver program 
+int main() 
+{ 
+	string str = "geeksforgeeks"; 
+	reverseStr(str); 
+	cout << str; 
+	return 0; 
+} 
