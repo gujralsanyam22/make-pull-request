@@ -3,18 +3,18 @@
 
 int main()
 {
-int first=0,second=1,i,n,sum=0;
+int a=0,temp=1,i,n,c=0;
 cout<<"Enter the number of terms:";
 cin>>n;    // accepting terms
 cout<<"Fibonacci series:";
 cout<<"1 ";
 for(i=2;i<=n;i++)
 {
-sum=first+second;
-first=second;
-second=sum;
+c=a+temp;
+a=temp;
+temp=c;
 
-cout<<sum<<" ";
+cout<<c<<" ";
 }
 return 0;
 }
