@@ -1,24 +1,12 @@
 #include<iostream>
 using namespace std;
-int factorial(int n)
-{
-    return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);
-}
 int main()
 {
-    int a;
-    cin>>a;
-    int b;
-    cin>>b;
-    if(a<b)
-    {
-        cout<<factorial(a);
-    }
-    else
-    {
-
-        cout<<factorial(b);
-    }
+    int fact=1,i,n;
+    cin>>n;
+    for(i=1; i<=n; i++)
+      fact=fact*i;
+    cout<<"The factorial of a number is"<<"%d"<<" ";
     return 0;
 }
-
+    
