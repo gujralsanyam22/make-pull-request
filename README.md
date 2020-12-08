@@ -30,8 +30,9 @@ If above link doesn't works watch [here](https://www.youtube.com/watch?v=saqCrCP
 
 If you wish to stay updated, join our Open Source Community Channel on Telegram [here](https://t.me/joinchat/AAAAAFbbJqzUyF18Okx94A)
 
-Open sorce is changing the worl- one pull request at a time.
-Hactoberfest encourages participation in open source community, which grows bigger every year. 
+Open sorce is changing the world- one pull request at a time.
+Hactoberfest encourages  the participation in open source community, which grows bigger every year. and want to learn more and improves the problem solving ability.
+
 Complete the 2020 challenge and earn a llimited edition T-shirt.
 
 ## Programming Languages 
@@ -51,7 +52,7 @@ This Repository cotains of following programming languages
 
   2. Go to Git Bash and Clone the forked repository using :
        
-       a. Clone the repository
+       a. Clone the repository.
 ```bash
    git clone https://github.com/your_username/make-pull-request
 ```
