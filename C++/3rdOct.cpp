@@ -73,12 +73,12 @@ int main()
         if(daysStayed > 0)
         {
             if(daysStayed == 1)
-                cout<<"Stayed for "<<daysStayed<<" day then left for "<<v[i].first<<" on "<<v[i].second.day<<suffix[v[i].second.day%10]<<monthInThreeLetter[v[i].second.month-1]<<". ";
+                cout<<"Stayed for "<<daysStayed<<" day then left for "<<v[i].first<<" on "<<v[i].second.day<<suffix[v[i].second.day%10]<<monthInThreeLetter[v[i].second.month-1]<<" ";
             else
-                cout<<"Stayed for "<<daysStayed<<" days then left for "<<v[i].first<<" on "<<v[i].second.day<<suffix[v[i].second.day%10]<<monthInThreeLetter[v[i].second.month-1]<<". ";
+                cout<<"Stayed for "<<daysStayed<<" days then left for "<<v[i].first<<" on "<<v[i].second.day<<suffix[v[i].second.day%10]<<monthInThreeLetter[v[i].second.month-1]<<"  ";
         }
         else
-            cout<<"Didn't stay in "<<v[i-1].first<<" went directly to "<<v[i].first<<". ";
+            cout<<"Didn't stay in "<<v[i-1].first<<" went directly to "<<v[i].first<<"  ";
     }
     cout<<endl;
 }
